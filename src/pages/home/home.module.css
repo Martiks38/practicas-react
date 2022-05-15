@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 54px);
+  padding: 0 3rem;
+}
+
+.contentTopic {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
