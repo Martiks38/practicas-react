@@ -1,0 +1,114 @@
+.contentTodolist {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 20vh minmax(80vh, 1fr);
+}
+
+.inputTask {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border: solid 2px var(--color-black);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.inputTask:focus {
+  border-color: rgb(0, 150, 100);
+}
+
+.inputTask::-webkit-input-placeholder {
+  font-size: 1.2rem;
+}
+
+.inputTask::-moz-placeholder {
+  font-size: 1.2rem;
+}
+
+.inputTask:-ms-input-placeholder {
+  font-size: 1.2rem;
+}
+
+.inputTask::-ms-input-placeholder {
+  font-size: 1.2rem;
+}
+
+.inputTask::placeholder {
+  font-size: 1.2rem;
+}
+
+.labelInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23, 23, 23);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.plus {
+  display: flex;
+  padding: 0 1rem;
+  font-weight: 500;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  background-color: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: solid 2px var(--color-black);
+}
+
+.form {
+  place-self: center;
+}
+
+.tasks {
+  justify-self: center;
+}
+
+.tasks h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* List Item */
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.task::before {
+  content: ' ';
+  background-color: var(--color-black);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+.completedTask {
+  text-decoration: line-through;
+}
+
+.taskValue {
+  display: inline-block;
+  width: 25ch;
+}
+
+.taskButton {
+  height: 30px;
+  border: solid 2px var(--color-black);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.panelButton {
+  display: inline-flex;
+  gap: 0 1rem;
+  margin-left: 1rem;
+}
