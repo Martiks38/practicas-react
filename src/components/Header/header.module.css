@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  background-color: #868686;
+  padding: 0.4rem 1.5rem;
+}
+
+.navbar {
+  margin-left: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}

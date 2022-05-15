@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src/"
-  }
+    "module": "ES6",
+    "target": "ES6",
+    "jsx": "react",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "incremental": true,
+    "baseUrl": "src"
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
 }
