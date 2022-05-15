@@ -5,8 +5,9 @@ import './shop.css'
 
 function Shop() {
   const [products, setProducts] = useState([])
-  const [query, setQuery] = useState(
-    () => localStorage.getItem('queryDigitalShop') ?? ''
+  const [order, setOrder] = useState('')
+  const [query, setQuery] = useState(() =>
+    localStorage.getItem('queryDigitalShop')
   )
 
   useEffect(() => {
@@ -25,6 +26,10 @@ function Shop() {
 
   const handleChange = (event) => {
     setQuery(event.currentTarget.value)
+  }
+
+  const handleOrder = (event) => {
+    setOrder(event.currentTarget.value)
   }
 
   if (!products.length)
@@ -47,11 +52,23 @@ function Shop() {
             placeholder="tv o marca de procesador"
             onChange={handleChange}
           />
+          <select name="order" onChange={handleOrder} className="shop__select">
+            <option value="order">Ordenar por: </option>
+            <option value="price">Precio</option>
+            <option value="alphabet">Nombre</option>
+          </select>
         </form>
         <ul className="listProduct">
           {products
             .filter((product) =>
               product.name.toLowerCase().includes(query.toLowerCase())
+            )
+            .sort((prod1, prod2) =>
+              order == 'price'
+                ? prod1.price - prod2.price
+                : order == 'alphabet'
+                ? prod1.name.localeCompare(prod2.name)
+                : null
             )
             .map((product) => (
               <li key={product.id} className="itemProduct">

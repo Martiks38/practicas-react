@@ -20,11 +20,16 @@
   margin: 1rem 0;
 }
 
-.shop__search {
+.shop__search,
+.shop__select {
   padding: 0.4rem 0.8rem;
   font-size: 1.1rem;
   border-radius: 6px;
   border: solid 2px var(--color-black);
+}
+
+.shop__select {
+  margin-left: 1rem;
 }
 
 .exampleProducts {
