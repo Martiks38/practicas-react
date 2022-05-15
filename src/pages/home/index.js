@@ -14,9 +14,11 @@ const Topic = styled(Link)`
 
 function Home() {
   return (
-    <div className={styles.contentTopic}>
-      <Topic href="/todolist">Todolist</Topic>
-      <Topic href="/shop">Shop</Topic>
+    <div className={styles.container}>
+      <div className={styles.contentTopic}>
+        <Topic href="/todolist">Todolist</Topic>
+        <Topic href="/shop">Shop</Topic>
+      </div>
     </div>
   )
 }

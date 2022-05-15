@@ -1,5 +1,5 @@
-import api from 'api/index'
 import { useEffect, useState } from 'react'
+import api from 'api/tasklist.js'
 import styles from './todolist.module.css'
 
 function Todolist() {
@@ -58,30 +58,28 @@ function Todolist() {
       <div className={styles.tasks}>
         <h1>Lista de tareas</h1>
         {!taskList.length ? (
-          'loading task list example...'
+          'loading example tasks...'
         ) : (
           <ul>
             {taskList.map((task) => (
-              <>
-                <li key={task.id} className={styles.task}>
-                  <span
-                    className={
-                      task.complete
-                        ? `${styles.completedTask} ${styles.taskValue}`
-                        : `${styles.taskValue}`
-                    }
-                    onClick={() => handleComplete(task.id)}
-                  >
-                    {task.task}
-                  </span>
-                  <button
-                    className={styles.taskButton}
-                    onClick={() => removeTask(task.id)}
-                  >
-                    ❌
-                  </button>
-                </li>
-              </>
+              <li key={task.id} className={styles.task}>
+                <span
+                  className={
+                    task.complete
+                      ? `${styles.completedTask} ${styles.taskValue}`
+                      : `${styles.taskValue}`
+                  }
+                  onClick={() => handleComplete(task.id)}
+                >
+                  {task.task}
+                </span>
+                <button
+                  className={styles.taskButton}
+                  onClick={() => removeTask(task.id)}
+                >
+                  ❌
+                </button>
+              </li>
             ))}
           </ul>
         )}

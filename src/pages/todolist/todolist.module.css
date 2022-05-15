@@ -1,7 +1,8 @@
 .contentTodolist {
   display: grid;
-  width: 100%;
   grid-template-rows: 20vh minmax(80vh, 1fr);
+  width: 100%;
+  padding-bottom: 3rem;
 }
 
 .inputTask {
